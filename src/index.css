@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700&display=swap');
+
+/* Estin Surgical - Professional Medical Equipment Website Design System */
+
+@layer base {
+  :root {
+    --background: 210 33% 99%;
+    --foreground: 210 29% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 29% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 29% 15%;
+
+    /* Medical Blue - Trust & Professionalism */
+    --primary: 201 79% 46%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Light Blue Secondary */
+    --secondary: 201 65% 95%;
+    --secondary-foreground: 201 79% 30%;
+
+    --muted: 210 20% 96%;
+    --muted-foreground: 210 15% 45%;
+
+    /* Accent - Soft Teal */
+    --accent: 187 60% 94%;
+    --accent-foreground: 187 60% 25%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 20% 90%;
+    --input: 210 20% 90%;
+    --ring: 201 79% 46%;
+
+    --radius: 0.75rem;
+
+    /* Custom Medical Colors */
+    --medical-blue: 201 79% 46%;
+    --medical-blue-light: 201 65% 95%;
+    --medical-blue-dark: 201 79% 30%;
+    --medical-teal: 187 60% 45%;
+    --medical-gray: 210 15% 45%;
+    --medical-light: 210 33% 98%;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(210 20% 50% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(210 20% 50% / 0.1), 0 2px 4px -2px hsl(210 20% 50% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(210 20% 50% / 0.1), 0 4px 6px -4px hsl(210 20% 50% / 0.1);
+    --shadow-xl: 0 20px 25px -5px hsl(210 20% 50% / 0.1), 0 8px 10px -6px hsl(210 20% 50% / 0.1);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 210 29% 8%;
+    --foreground: 210 20% 96%;
+
+    --card: 210 29% 12%;
+    --card-foreground: 210 20% 96%;
+
+    --popover: 210 29% 12%;
+    --popover-foreground: 210 20% 96%;
+
+    --primary: 201 79% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 201 40% 20%;
+    --secondary-foreground: 201 65% 90%;
+
+    --muted: 210 20% 18%;
+    --muted-foreground: 210 15% 60%;
+
+    --accent: 187 40% 20%;
+    --accent-foreground: 187 60% 85%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 210 20% 20%;
+    --input: 210 20% 20%;
+    --ring: 201 79% 50%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', 'Inter', system-ui, sans-serif;
+    @apply font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply py-16 md:py-24 px-4 md:px-8;
+  }
+
+  .container-medical {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .card-medical {
+    @apply bg-card rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-border;
+  }
+
+  .btn-primary-medical {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-3 rounded-lg font-medium transition-all duration-200 shadow-md hover:shadow-lg;
+  }
+
+  .btn-secondary-medical {
+    @apply bg-secondary text-secondary-foreground hover:bg-secondary/80 px-6 py-3 rounded-lg font-medium transition-all duration-200 border border-primary/20;
+  }
+
+  .text-gradient-medical {
+    @apply bg-gradient-to-r from-primary to-[hsl(var(--medical-teal))] bg-clip-text text-transparent;
+  }
+
+  .icon-medical {
+    @apply text-primary bg-secondary p-3 rounded-xl;
+  }
+}
